@@ -17,7 +17,13 @@
 /*   const element = React.createElement('div', { className: 'container' }, 'Hello World!')
   //log out the element
   console.log(element) */
-  const element = <div className="container">Hello World</div>
+  const content='Hello World'
+  const myClassName='container'
+  const props = {
+    className:'container',
+    children:'Hello World!'
+  }
+  const element = <div {...props}>Hello there</div>
   //render the element to the root element
   ReactDOM.render(element, rootElement)
 </script>
