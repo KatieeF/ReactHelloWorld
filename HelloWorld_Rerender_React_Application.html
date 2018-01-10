@@ -1,0 +1,35 @@
+<div id="root"></div>
+<!--React-->
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/prop-types@15.6.0/prop-types.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+
+<script type="text/babel">
+  const rootElement = document.getElementById('root')
+
+//function
+function Message({message}){
+return(
+  <div>
+      {message ? (
+        <div>{message}</div>
+      ) : (
+        <div>No Message</div>
+      )}
+    </div>
+)
+ //This is equal to the message ?/: above
+/*   //if there is no message output a message to the user
+if(!message) {
+  return React.createElement(div, null , 'No Message')
+}
+return React.createElement(div, null, message)
+} */
+  //render the element to the root element
+  ReactDOM.render(element, rootElement)
+  //null message
+  <Message message={null}, 
+  document.getElementById('root')
+</script>
