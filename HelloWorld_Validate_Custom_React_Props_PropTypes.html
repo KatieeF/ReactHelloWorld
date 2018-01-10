@@ -1,0 +1,38 @@
+<div id="root"></div>
+<!--React-->
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/prop-types@15.6.0/prop-types.js"></script>
+<script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+
+<script type="text/babel">
+  const rootElement = document.getElementById('root')
+
+  function SayHello(props){
+    return (
+      <div> 
+        Hello {props.firstName} {props.lastName}
+      </div>
+    )
+  }  
+
+
+const PropTypes = {
+  string(props, propName, componentName){
+    //if type of props in propname is not equal to the string
+    if (typeof props[propName] !== 'string'){
+      return new Error ('You need to pass a string for ${propName}')
+    }
+  }
+}
+
+SayHello.propTypes = {
+  firstName: PropTypes.string,
+  lastName: PropTypes.string,
+}
+  //render the element to the root element
+  ReactDOM.render(element, rootElement)
+  <SayHello firstName{true}/>, 
+  document.getElementById('root')
+</script>
