@@ -1,0 +1,21 @@
+<div id="root"></div>
+<!--React-->
+<script src="https://unpkg.com/react@16.0.0-rc.3/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.0.0-rc.3/umd/react-dom.development.js"></script>
+
+<script type="text/javascript">
+  const rootElement = document.getElementById('root')
+  /*const element = document.createElement('div')
+  //set the text
+  element.textContent = 'Hello World!'
+  element.className = 'container'
+  //the text should be included in the rootElement
+  rootElement.appendChild(element) */
+
+
+  const element = React.createElement('div', { className: 'container' }, 'Hello World!')
+  //log out the element
+  console.log(element)
+  //render the element to the root element
+  ReactDOM.render(element, rootElement)
+</script>
