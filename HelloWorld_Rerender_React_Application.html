@@ -8,8 +8,21 @@
 
 <script type="text/babel">
   const rootElement = document.getElementById('root')
-  const time = new Date().toLocaleTimeString()
-  const element = <div>The time is {time} </div>
+
+  //create function for getting and displaying time
+  function tick(){
+    const time = new Date().toLocaleTimeString()
+    const element = <div>The time is {time} </div>
+      //render the element to the root element
+    ReactDOM.render(element, rootElement)
+  }
+
+
+  //call function
+  tick()
+  //set update interval in milliseconds
+  setInterval(tick,1000)
+ 
 
   //render the element to the root element
   ReactDOM.render(element, rootElement)
