@@ -8,28 +8,11 @@
 
 <script type="text/babel">
   const rootElement = document.getElementById('root')
+  const time = new Date().toLocaleTimeString()
+  const element = <div>The time is {time} </div>
 
-//function
-function Message({message}){
-return(
-  <div>
-      {message ? (
-        <div>{message}</div>
-      ) : (
-        <div>No Message</div>
-      )}
-    </div>
-)
- //This is equal to the message ?/: above
-/*   //if there is no message output a message to the user
-if(!message) {
-  return React.createElement(div, null , 'No Message')
-}
-return React.createElement(div, null, message)
-} */
   //render the element to the root element
   ReactDOM.render(element, rootElement)
-  //null message
-  <Message message={null}, 
+ 
   document.getElementById('root')
 </script>
